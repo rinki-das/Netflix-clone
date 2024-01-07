@@ -1,0 +1,456 @@
+
+  body.register-page {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px; /* Increased margin-bottom for space between container and footer */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    color: #f2ecec;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #efe9e9;
+    background-color: #706d6d;
+}
+
+button {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    top:-10px;
+}
+
+button:hover {
+    background-color: #cc0a10;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+   
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    color: #737373;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer__links p {
+    margin: 20px;
+}
+
+.footer__links a {
+    color: #c9c5c5;
+    text-decoration: none;
+    color: #737373;
+}
+
+.footer__links a:hover {
+    text-decoration: underline;
+}
+
+.dropdown__container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+}
+
+.logo-outside {
+    width: 230px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown__container i {
+    margin-right: 5px;
+}
+
+.language__drop__down {
+    padding: 5px;
+}
+body.login-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make sure the background covers the entire viewport height */
+}
+
+.login-container {
+  max-width: 500px;
+  margin: 120px auto;
+  background-color: rgba(109, 108, 108, 0.5); /* Adjust the last value for transparency */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: -50vh;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  color: #f9f5f5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #dddada;
+}
+
+.login-input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #7a7777;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.login-button {
+  background-color: #a20e0e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #9f3c3c;
+}
+
+p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login-link {
+  color: #ab0b09;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+
+body.forgot-password-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make sure the background covers the entire viewport height */
+}
+
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: rgba(109, 108, 108, 0.5); /* Adjust the last value for transparency */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #f9f5f5;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #dddada;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #7a7777;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #a20e0e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9f3c3c;
+}
+
+p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Add styles for the hidden form if needed */
+form[style="display: none;"] {
+ 
+}
+
+body.forgot-password-verify-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make sure the background covers the entire viewport height */
+}
+
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: rgba(109, 108, 108, 0.5); /* Adjust the last value for transparency */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #f9f5f5;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #dddada;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #7a7777;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #a20e0e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9f3c3c;
+}
+
+/* styles.css */
+
+
+header {
+  background-color: #111;
+  padding: 1rem 0;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+main {
+  background-color: #222;
+  padding: 2rem 0;
+}
+
+.main-movie {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+}
+
+.main-movie .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-movie .button {
+  margin-top: 1rem;
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.recommended-movies,
+.trending-now,
+.popular-on-netflix {
+  color: white;
+  margin-top: 2rem;
+}
+
+.title-controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.carousel-container {
+  overflow: hidden;
+}
+
+/* Increase the size of the carousel cards */
+.carousel-item {
+  width: 300px; /* Adjust the width to your preference */
+  height: 400px; /* Adjust the height to your preference */
+  box-sizing: border-box;
+}
+
+/* Add hover effect to the carousel cards */
+.carousel-item:hover {
+  transform: scale(1.05); /* Increase the scale on hover */
+}
+
+
+
+/* Increase the size of the movie cards */
+.movie {
+  width: 100px; /* Adjust the width to your preference */
+  height: 100px; /* Adjust the height to your preference */
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+}
+
+/* Add hover effect */
+.movie:hover {
+  transform: scale(1.05); /* Increase the scale on hover */
+}
+
+.movie a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-arrow,
+.right-arrow {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}

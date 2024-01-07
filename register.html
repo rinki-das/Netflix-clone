@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlTag">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="registerTitle">Register</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezJqjG1i7rxuqVdZFKFd+5kgZI/KdL6M4RSjE+2S/KMIJLZ+Jv9GQp1Gxhslf" crossorigin="anonymous">
+</head>
+
+<body class="register-page">
+    <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="Your Logo" class="logo-outside">
+
+    <div class="container">
+
+        <h2 data-translate="registerTitle">Register</h2>
+        <form action="register.php" method="post">
+            <label for="username" data-translate="username">Username:</label>
+            <input type="text" name="username" required>
+
+            <label for="password" data-translate="password">Password:</label>
+            <input type="password" name="password" required>
+
+            <label for="email" data-translate="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <button type="submit" data-translate="registerButton">Register</button>
+            <p data-translate="haveAccount"><a href="login.html" data-translate="loginHere">or Login here</a>.</p>
+        </form>
+    </div>
+
+    <div class="footer">
+        <h4 data-translate="questionsCall">Questions? Call 000-800-919-1694</h4>
+        <div class="footer__links">
+            <p><a href="#" data-translate="faq">FAQ</a></p>
+            <p><a href="#" data-translate="helpCenter">Help Centre</a></p>
+            <p><a href="#" data-translate="termsOfUse">Terms of Use</a></p>
+            <p><a href="#" data-translate="privacy">Privacy</a></p>
+            <p><a href="#" data-translate="cookiePreferences">Cookie Preferences</a></p>
+            <p><a href="#" data-translate="corporateInfo">Corporate Information</a></p>
+        </div>
+        <div class="dropdown__container">
+            <i class="fas fa-globe"></i>
+            <select name="languages" id="languagesSelect" class="language__drop__down">
+                <option value="en" selected>English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const languagesSelect = document.getElementById("languagesSelect");
+            const htmlTag = document.getElementById("htmlTag");
+            const titleTag = document.querySelector("title");
+            const translatableElements = document.querySelectorAll("[data-translate]");
+
+            const translations = {
+                'en': {
+                    'registerTitle': 'Register',
+                    'username': 'Username:',
+                    'password': 'Password:',
+                    'email': 'Email:',
+                    'registerButton': 'Register',
+                    'haveAccount': 'Already have an account? ',
+                    'loginHere': 'Login here',
+                    'questionsCall': 'Questions? Call 000-800-919-1694',
+                    'faq': 'FAQ',
+                    'helpCenter': 'Help Centre',
+                    'termsOfUse': 'Terms of Use',
+                    'privacy': 'Privacy',
+                    'cookiePreferences': 'Cookie Preferences',
+                    'corporateInfo': 'Corporate Information',
+                },
+                'hi': {
+                    'registerTitle': 'रजिस्टर',
+                    'username': 'उपयोगकर्ता नाम:',
+                    'password': 'पासवर्ड:',
+                    'email': 'ईमेल:',
+                    'registerButton': 'रजिस्टर करें',
+                    'haveAccount': 'पहले से ही एक खाता है? ',
+                    'loginHere': 'यहां लॉगिन करें',
+                    'questionsCall': 'सवाल? 000-800-919-1694 पर कॉल करें',
+                    'faq': 'सामान्य प्रश्न',
+                    'helpCenter': 'सहायता केंद्र',
+                    'termsOfUse': 'उपयोग की शर्तें',
+                    'privacy': 'गोपनीयता',
+                    'cookiePreferences': 'कुकी पसंद',
+                    'corporateInfo': 'कॉर्पोरेट जानकारी',
+                }
+            };
+
+            languagesSelect.addEventListener("change", function () {
+                const selectedLanguage = languagesSelect.value;
+                htmlTag.lang = selectedLanguage;
+
+                // Update title based on the selected language
+                titleTag.innerText = translations[selectedLanguage]['registerTitle'];
+
+                // Update content based on the selected language
+                translatableElements.forEach(element => {
+                    const translationKey = element.getAttribute('data-translate');
+                    const translation = translations[selectedLanguage][translationKey] || "Translation not available";
+                    element.innerText = translation;
+                });
+            });
+            
+
+            // Display an alert if registrationSuccess is true
+            if (typeof registrationSuccess !== 'undefined' && registrationSuccess) {
+                alert('Successfully registered!');
+            }
+
+            
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

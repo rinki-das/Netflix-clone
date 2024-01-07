@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/styles.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+        header {
+            background-color: #111;
+            padding: 1rem 0;
+            color: white;
+        }
+
+        /* Add this style for the logo */
+.logo {
+    color: red;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        main {
+            background-color: #222;
+            padding: 2rem 0;
+        }
+
+        .main-movie {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .main-movie .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-movie .button {
+            margin-top: 1rem;
+            background-color: red;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .recommended-movies,
+        .trending-now {
+            color: white;
+            margin-top: 2rem;
+        }
+
+        .title-controls-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+        }
+/* Add this style for the carousel */
+.carousel {
+    display: flex;
+    gap: 16px; /* Adjust the value to your preference */
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* Increase the size of the movie cards */
+.movie {
+    width: 300px; /* Adjust the width to your preference */
+    height: 100px; /* Adjust the height to your preference */
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+}
+
+/* Add hover effect */
+.movie:hover {
+    transform: scale(1.05); /* Increase the scale on hover */
+}
+
+
+        .movie a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .movie img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .popular-on-netflix {
+            color: white;
+            margin-top: 2rem;
+        }
+
+        .popular-on-netflix .container {
+            position: relative;
+        }
+
+        .popular-on-netflix .title-controls-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .popular-on-netflix .carousel-container {
+            overflow: hidden;
+        }
+
+        .popular-on-netflix .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .popular-on-netflix .movie {
+            width: 250px; /* Set the width of each movie card */
+            box-sizing: border-box;
+        }
+
+        .popular-on-netflix .movie a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .popular-on-netflix .movie img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+    <title>NETFLIX</title>
+</head>
+<body class="netflix-page">
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav>
+                <a href="Home.html" class="active">Home</a>
+                <a href="#">Movies</a>
+                <a href="#">Recently played</a>
+                <a href="#">Search</a>
+                <a href="myprofile.html">My Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-movie">
+            <div class="container">
+                <h3 class="title">Jujutsu Kaisen</h3>
+                <p class="description">
+                    A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.
+                </p>
+                <button role="button" class="button"><i class="fas fa-play"></i>Watch now</button>
+                <button role="button" class="button"><i class="fas fa-info-circle"></i>Watch</button>
+            </div>
+        </div>
+
+        <div class="recommended-movies container">
+            <div class="title-controls-container">
+                <h3>Recommended Movies</h3>
+                <div class="indicators"></div>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Add your recommended movies cards here -->
+                    <div class="movie">
+                        <a href="#"><img src="https://sandrarose.com/wp-content/uploads/2023/12/leave-world.jpg" alt="Recommended Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZWeZZHxhMTfaN0c6J2dOYUpVNwp7g4HszdZ-ZU6YQ5ZZgiyfPPAA-8xz9yNb7pcXonXUE5X_joNUT82vH0DhAatzJtrrjf9PyJR47xF4AQ8LYdM62EeKIsSf2iIeJC1Pi0CL94NNe3Yg1yzoH-joFQK0COXXHM6BurOGhdIEVl38bd-PLQQDwZJzIXfmH6KRCUXemxnltobTgf9EtNfOg7YFnxpp0-bpQazl-XW70Luz5yQeBj629YDmP2ieou-rVX6t7aWajtzx5B3ITSk3DJ5WLJB.jpg?r=879" alt="Recommended Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://i.ytimg.com/vi/zOCL-m3qCd0/sddefault.jpg" alt="Recommended Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://ton.bard.edu/wp-content/uploads/2023/11/maestro-16-x-9.jpg" alt="Recommended Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://static1.squarespace.com/static/63bb3e8a824d7e2f7eedf0d3/64ac424fcaadf8324a193593/64f72fd198b15912087b22d0/1693921795399/Chicken%2BRun%2BDawn%2Bof%2Bthe%2BNugget%2BHorizontal.jpg?format=1500w" alt="Recommended Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGLV5sc_loW2YUQk5jtHlRfSTFt-ZH0IvY5Qe5SpCJvYcz4ndhKKcB6ivmf2Y0Z9ph1Fo&usqp=CAU" alt="Recommended Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://i.ytimg.com/vi/zOCL-m3qCd0/sddefault.jpg" alt="Recommended Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://ton.bard.edu/wp-content/uploads/2023/11/maestro-16-x-9.jpg" alt="Recommended Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://static1.squarespace.com/static/63bb3e8a824d7e2f7eedf0d3/64ac424fcaadf8324a193593/64f72fd198b15912087b22d0/1693921795399/Chicken%2BRun%2BDawn%2Bof%2Bthe%2BNugget%2BHorizontal.jpg?format=1500w" alt="Recommended Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGLV5sc_loW2YUQk5jtHlRfSTFt-ZH0IvY5Qe5SpCJvYcz4ndhKKcB6ivmf2Y0Z9ph1Fo&usqp=CAU" alt="Recommended Title 3"></a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Add arrows or controls for the Recommended Movies carousel -->
+            <button role="button" id="left-arrow" class="left-arrow"><i class="fas fa-angle-left"></i></button>
+            <button role="button" id="right-arrow" class="right-arrow"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+        <div class="trending-now container">
+            <div class="title-controls-container">
+                <h3>Get In On the Action</h3>
+                <div class="indicators"></div>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Add your trending now cards here -->
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeX-kdJ10PCiLkaH0pEHkqzEeqEmgIRhqH6ddbABPrN00Xe-ajKw4UlpBJ8CwwyRK_Hbx_Tt1YNDknYusXSulQynvIyE5FdZheE.jpg?r=136" alt="Trending Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZfGwED6kNpc0JrQ4HcjtjIqATWuaHmY6hw6Zx_lVjHdFKXndNNllUBGPfG_q2JXHKk17US8UP0QYGZjaA3c91PfiVj-uaofOIE.jpg?r=9ee" alt="Trending Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfNHj91muJFh8mIMCpj5qNBh7kvhmytGYRkYnFWqUHb-hUiMN7nGMWw1EU_xXvF1AbBSO4vnfb72D1t2jAUSBMjghcKo4gC9piXeZQJtztJjcPABbxzAPdaj2nrx7zsk8avg.jpg?r=074" alt="Trending Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSk_58ASeZlVGUIa1Of2BKIZDMMqWNqR3nClwdTZqGyX74oxrzEUEbExgMjASbLfZicqZ8BKGMf94zB9qfEOV1B8x-4_0IDO-eI.jpg?r=e80" alt="Trending Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUe_nFJxzAoEPPKjzZL5DiW6uFbbheaMuF1WpdV0IKBnd4jjMm0_2VL4fYeeteVBk-LSLBC3O9nExUyKuBhY82PFheX-Nzhny91YLa1F-CJrWB1bDRey6E7_l9Lexog4hVCG.jpg?r=b25" alt="Trending Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTrz26FnCEvkl256jnwEr1UPjEQCU7gYL6QPqRb1ra6VfAwg3N9fEinMu_tqbSWdnZkHfY0XQnH5VTi5cbQK6MY_dcBAY060q910xx5WGF5oxDxHMlWGyFmq7vCHiDtAw0WTFZiqL0tN63ZRyIqxG99o61SbZkao7ZqF5cZiXAtmo5w8t9FhQmZv6nTtmNf1EnElMZZ1UqPr1S5aj7B6A8Wz0hWAGaGOLNYgAC9DzfTid4EzF4CetXe45EB6JIj7PpTrmxCqtT7mWGfWiMEooOyg8Q.jpg?r=a75" alt="Trending Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUdeP-LLXlLFMWEhoiXMPxaIqWLDrJYBfDYhb9jTgrD06l6vV-Ot6xKBG4dOmjNemFh-XpdQOUaGOr2iwjv-mzRUG6VSKA-fiR5w1_PJguzAb9kpPJVlKzunPCkcN3jT33EV.jpg?r=5f1" alt="Trending Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZ499O0Jj5xV-SjMjdnRCyzj_GfrHdmfilQuRSZYM_1bEulSiGV0aXLpxUMuSMjz2bNZI2zshg5VhtT6lQ9MVVMgIa29h6vDgD5pshf6xjbmuQsDBsH2voT-B0CMQ126eTxT.jpg?r=fe1" alt="Trending Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbYUU0QrXhdxkE1BT72RLABwG6-javdxuYd_UXEZUWawKXPBU3UlLoRJnKsD6S-alEuY_lw_sLJqEbZOKLNJrqjWQiN8FgzeR1I.jpg?r=dd6" alt="Trending Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcQCrH6O-SnDGu_bPKdphOq9t2BbFBHaYYaxqBMTOjW88CyIlHGYTdGSUs7h81FPNIrzYh3Gg24SwYTRd_szOMmHvCK-oFrxLXI.jpg?r=684" alt="Trending Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXAGJ9_pI2w07sLCITKfpuI4CwKYVwmbJZ6G_KvnEpZ5_L2HMSjdj1LclOvafs2VRPZW6aPx-Z7Ofp0xc0bP9dbAM35B8nc3Ef8.jpg?r=2b9" alt="Trending Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABe7cj5-eG0q_wHcRqExB436y2c4Hp6XBs1ceeGLu7WMLQ8fWym0sYJGBpanrbhebzs4WXi_YaiiXxNXzWoTycTcyER1u__065WI.jpg?r=e73" alt="Trending Title 3"></a>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Add arrows or controls for the Trending Now carousel -->
+            <button role="button" id="trending-left-arrow" class="left-arrow"><i class="fas fa-angle-left"></i></button>
+            <button role="button" id="trending-right-arrow" class="right-arrow"><i class="fas fa-angle-right"></i></button>
+        </div>
+        <div class="popular-on-netflix container">
+            <div class="title-controls-container">
+                <h3>Popular on Netflix</h3>
+                <div class="indicators"></div>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Add your popular on Netflix cards here -->
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeG8zcw7HC0gWoJpHwsiXudOXMeQtQ2R1SMPnhzKdaZvAIRaa1fC0A6tq-z73ycNdlgy4XPElnm7ddS-QB7_Jiz3NutH5bWs665sl7JxFypeVT7YmymfOrvKTa6L6wlKMEJ_.jpg?r=650" alt="Popular Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABczlpn4mymQtuFcpyIhZpcGOplUIUFDq1FPWkAWqWh58eY0dDLHMumo4ZMR4xKYCJFJa4ZCf1naLQLSsGrKos0b9CP98-9NoHco.jpg?r=8da" alt="Popular Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbWGE1e2cDYc7T50SGIHGiPpK52qIZHq7iPCKFfhjp0D1HEX6UKQwNa5VT2WG1xXVytGTkRn7I6LLKyrhUUB5v-72sr6kUW3Gtc.jpg?r=549" alt="Popular Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaTLMK3P7alGqDxb5lxlSzcoUSgQdczLHKB1f-nlLuNiBV2ep4gkkbDKV9hvtDmJIEAhhWrdhrXv0rWboGcnIXodg5OtoP3rWz5opqcWIHf7vlYnnAEKuo2yfnCflLo72YfJj1V4hHEaa-JC2njLrgyiTCAnSi3S0Y4XoWhzYp0F-nDDt1r1UoUO4rwMVGnkqVgfRBsBr0twzkhZ9O_T0sWc07NOJpcqiyxEkm6MHnITr3w_smOTjv13sf7v2zQi4-FHfhxYSlX2c-N6eqwJCkrmZC8QUzmWROeBVIbumOPUHmlePCfUfM1Z.jpg?r=7c8" alt="Popular Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcWzBOWXFMhnbCu1y1k--N2HnY32X4XQVKAJIu4W7HRnEeh7FGCN_WmkMq2g39yzwNqSnaz0elw5CBDvoRKwUSdJnWd4Pw3ucNj0fVrpNgwEF-cG0HpAPVTOPvnWunZzMxiR.jpg?r=a98" alt="Popular Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeu2XnBbRCpFb2UcqfGpY7PnsHZd2AB7ELZGp7d_tCQcrjAo9TP4LjdZuPnCOJf3M9hC4KcmWSW8Mq7dqg7tKhvA8gNfVwlMixk.jpg?r=1dc" alt="Popular Title 3"></a>
+                    </div>
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABd7yGfxi5Z3Hlv3TMOq4MzZFmtsdviv1FUDWEi-1AJ1bcsnTM56uG8u3OhN62WjEqYXlnaUuIEMkLytDXSnreO-G2PCqzC8pQv54SMLtp26y-zqJjSPxW1jFBXVTGas0lcX7.jpg?r=db4" alt="Popular Title 1"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQWIgBO_EFhOKrvusmvJ65y8sI24OEmAMpeLrnGtbfX4WasnUl3oPS1Q4Lu2ttWYw5O4WeAWN-kko_WW1qeF3PR-y-OWn3Dg7oQ4wGuVYaNMksrS439WmckoepQLc_IfaqrF.jpg?r=347" alt="Popular Title 2"></a>
+                    </div>
+
+                    <div class="movie">
+                        <a href="#"><img src="https://occ-0-2610-3646.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeP1RM4858mauIiBifkElmEb_ojBTzzN2FGZPRBy4bUYjmWtoFreHqj6gx7EEVVjOZP1U8-2RB-X1AEbGqgQdycztfdBtusee_c.jpg?r=d4b" alt="Popular Title 3"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add arrows or controls for the Popular on Netflix carousel -->
+            <button role="button" id="popular-left-arrow" class="left-arrow"><i class="fas fa-angle-left"></i></button>
+            <button role="button" id="popular-right-arrow" class="right-arrow"><i class="fas fa-angle-right"></i></button>
+        </div>
+    
+    </main>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Additional JavaScript for the Recommended Movies carousel
+        const carousel = document.querySelector('.recommended-movies .carousel');
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+
+        let currentIndex = 0;
+
+        rightArrow.addEventListener('click', function() {
+            if (currentIndex < carousel.children.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        leftArrow.addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        function updateCarousel() {
+            const translateValue = -currentIndex * 100 + '%';
+            carousel.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        // Additional JavaScript for the Trending Now carousel
+        const trendingCarousel = document.querySelector('.trending-now .carousel');
+        const trendingLeftArrow = document.getElementById('trending-left-arrow');
+        const trendingRightArrow = document.getElementById('trending-right-arrow');
+
+        let trendingCurrentIndex = 0;
+
+        trendingRightArrow.addEventListener('click', function() {
+            if (trendingCurrentIndex < trendingCarousel.children.length - 1) {
+                trendingCurrentIndex++;
+                updateTrendingCarousel();
+            }
+        });
+
+        trendingLeftArrow.addEventListener('click', function() {
+            if (trendingCurrentIndex > 0) {
+                trendingCurrentIndex--;
+                updateTrendingCarousel();
+            }
+        });
+
+        function updateTrendingCarousel() {
+            const trendingTranslateValue = -trendingCurrentIndex * 100 + '%';
+            trendingCarousel.style.transform = 'translateX(' + trendingTranslateValue + ')';
+        }
+
+        
+        // Additional JavaScript for the Popular on Netflix carousel
+        const popularCarousel = document.querySelector('.popular-on-netflix .carousel');
+        const popularLeftArrow = document.getElementById('popular-left-arrow');
+        const popularRightArrow = document.getElementById('popular-right-arrow');
+
+        let popularCurrentIndex = 0;
+
+        popularRightArrow.addEventListener('click', function() {
+            if (popularCurrentIndex < popularCarousel.children.length - 1) {
+                popularCurrentIndex++;
+                updatePopularCarousel();
+            }
+        });
+
+        popularLeftArrow.addEventListener('click', function() {
+            if (popularCurrentIndex > 0) {
+                popularCurrentIndex--;
+                updatePopularCarousel();
+            }
+        });
+
+        function updatePopularCarousel() {
+            const popularTranslateValue = -popularCurrentIndex * 100 + '%';
+            popularCarousel.style.transform = 'translateX(' + popularTranslateValue + ')';
+        }
+    </script>
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Netflix 1</p>
+    </footer>
+</body>
+</html>
+
+
