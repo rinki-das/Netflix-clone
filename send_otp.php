@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             try {
                 // Server settings
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.gmail.com'; // Your SMTP server
+                $mail->Host       = ''; // Your SMTP server
                 $mail->SMTPAuth   = true;
                 $mail->Username   = ''; // Your Gmail email address
                 $mail->Password   = '';  // Your Gmail email password
