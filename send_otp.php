@@ -35,10 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com'; // Your SMTP server
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'rinroy351@gmail.com'; // Your Gmail email address
-                $mail->Password   = 'rdosobbvphxxhogc';  // Your Gmail email password
+                $mail->Username   = ''; // Your Gmail email address
+                $mail->Password   = '';  // Your Gmail email password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port       = 587;
+                $mail->Port       = ;
 
                 // Recipients
                 $mail->setFrom('rinroy351@gmail.com', 'Company Admin');
