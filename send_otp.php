@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Port       = ;
 
                 // Recipients
-                $mail->setFrom('rinroy351@gmail.com', 'Company Admin');
+                $mail->setFrom('your email here', 'Company Admin');
                 $mail->addAddress($email);
 
                 // Content
